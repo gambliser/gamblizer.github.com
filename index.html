@@ -1,0 +1,465 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gamblaizer | Analyze Smarter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,23,42,0.95);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00ffb3;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffb3;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero-content h1{
+    font-size:70px;
+    color:#00ffb3;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:10px;
+    text-decoration:none;
+}
+
+.primary{
+    background:#00ffb3;
+    color:black;
+}
+
+.secondary{
+    background:transparent;
+    border:2px solid #00ffb3;
+    color:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#00ffb3;
+    margin-bottom:40px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#00ffb3;
+    margin-bottom:10px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.metric{
+    background:#111827;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.metric h2{
+    color:#00ffb3;
+    font-size:40px;
+}
+
+/* CALCULATOR */
+
+.calculator{
+    max-width:700px;
+    margin:auto;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00ffb3;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:20px;
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* FAQ */
+
+.faq-item{
+    background:#111827;
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">GAMBLAIZER</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>GAMBLAIZER</h1>
+
+        <p>
+            Analyze betting odds, calculate payouts,
+            understand probabilities and make informed
+            decisions using powerful analytical tools.
+        </p>
+
+        <div class="buttons">
+            <a href="#calculator" class="btn primary">Get Started</a>
+            <a href="#about" class="btn secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Gamblaizer</h2>
+
+    <p style="text-align:center;max-width:900px;margin:auto;">
+        Gamblaizer is a modern odds analysis and betting
+        calculator platform designed to help users understand
+        potential payouts, implied probabilities and risk
+        indicators. The platform provides analytical tools
+        and calculations for informational purposes.
+    </p>
+</section>
+
+<section id="how">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>1. Enter Odds</h3>
+            <p>Input the betting odds you want to analyze.</p>
+        </div>
+
+        <div class="card">
+            <h3>2. Calculate</h3>
+            <p>See potential payouts and profits instantly.</p>
+        </div>
+
+        <div class="card">
+            <h3>3. Analyze</h3>
+            <p>Review implied probability and risk indicators.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Analytics Dashboard</h2>
+
+    <div class="dashboard">
+
+        <div class="metric">
+            <h2>24/7</h2>
+            <p>Availability</p>
+        </div>
+
+        <div class="metric">
+            <h2>100%</h2>
+            <p>Instant Analysis</p>
+        </div>
+
+        <div class="metric">
+            <h2>AI</h2>
+            <p>Smart Insights</p>
+        </div>
+
+        <div class="metric">
+            <h2>∞</h2>
+            <p>Calculations</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="calculator">
+
+    <h2 class="section-title">Bet Calculator & Analyzer</h2>
+
+    <div class="calculator">
+
+        <input type="number" id="stake" placeholder="Stake Amount">
+
+        <input type="number" id="odds" placeholder="Decimal Odds">
+
+        <input type="number" id="probability"
+        placeholder="Estimated Probability (%)">
+
+        <button onclick="analyze()">Analyze Bet</button>
+
+        <div class="result" id="result">
+            Results will appear here.
+        </div>
+
+    </div>
+
+</section>
+
+<section id="features">
+
+    <h2 class="section-title">Features</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Odds Calculator</h3>
+            <p>Calculate payouts and profits instantly.</p>
+        </div>
+
+        <div class="card">
+            <h3>Risk Indicators</h3>
+            <p>View informational risk levels based on inputs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Probability Analysis</h3>
+            <p>Compare estimated and implied probabilities.</p>
+        </div>
+
+        <div class="card">
+            <h3>Modern Dashboard</h3>
+            <p>Clean and professional analytics layout.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="faq">
+
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>What is Gamblaizer?</h3>
+        <p>A betting calculator and analysis platform.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can it predict winners?</h3>
+        <p>No. It provides calculations and informational analysis only.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is it free?</h3>
+        <p>Yes.</p>
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p>Email: info@gamblaizer.com</p>
+    <p>Support available 24/7</p>
+
+</section>
+
+<footer>
+    © 2026 Gamblaizer. All Rights Reserved.
+</footer>
+
+<script>
+
+function analyze(){
+
+let stake = parseFloat(document.getElementById('stake').value);
+let odds = parseFloat(document.getElementById('odds').value);
+let probability = parseFloat(document.getElementById('probability').value);
+
+if(!stake || !odds){
+
+document.getElementById('result').innerHTML =
+'Please enter valid values.';
+
+return;
+}
+
+let payout = stake * odds;
+let profit = payout - stake;
+
+let output = `
+<h3>Calculation Results</h3>
+Potential Payout: R${payout.toFixed(2)}<br>
+Potential Profit: R${profit.toFixed(2)}
+`;
+
+if(probability){
+
+let implied = (1/odds)*100;
+
+output += `
+<br><br>
+Implied Probability:
+${implied.toFixed(2)}%
+`;
+}
+
+document.getElementById('result').innerHTML = output;
+
+}
+
+</script>
+
+</body>
+</html>
+```
